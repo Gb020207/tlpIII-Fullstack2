@@ -1,5 +1,6 @@
 import { where } from "sequelize";
 import { Peleadores } from "../models/crear.peleador.js";
+import sequelize from "../config/servidor.js";
 
 export const crearPeleador = async (req, res) => {
   try {
@@ -33,7 +34,9 @@ export const crearPeleador = async (req, res) => {
 };
 export const encontrarPeleador = async (req, res) => {
   try {
-    const peleadores = await Peleadores.findAll();
+    const peleadores = await Peleadores.findAll({
+      order: sequelize.random()
+    });
 
     return res.json({
       count: peleadores.length,
