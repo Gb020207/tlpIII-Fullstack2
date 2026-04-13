@@ -1,53 +1,165 @@
-# Getting Started with Create React App
+# Fight Club - FFC Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Un frontend moderno y visualmente atractivo inspirado en UFC Español, construido con React, Vite y Tailwind CSS.
 
-## Available Scripts
+## 🚀 Características
 
-In the project directory, you can run:
+- **Diseño UFC-inspired**: Tema oscuro con colores rojo, negro y dorado
+- **Responsive**: Funciona en desktop y mobile
+- **Componentes reutilizables**: Cards, botones, loaders
+- **Integración completa**: Consume la API REST del backend
+- **CRUD completo**: Crear, leer, actualizar y eliminar peleadores
+- **Animaciones suaves**: Hover effects y transiciones
 
-### `npm start`
+## 🛠️ Tecnologías
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 18** - Framework frontend
+- **Vite** - Build tool y dev server
+- **Tailwind CSS** - Framework CSS
+- **React Router DOM** - Routing
+- **Axios** - HTTP client
+- **ESLint** - Linting
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Estructura del Proyecto
 
-### `npm test`
+```
+src/
+├── components/          # Componentes reutilizables
+│   ├── Navbar.jsx      # Barra de navegación
+│   ├── Footer.jsx      # Pie de página
+│   ├── FighterCard.jsx # Card de peleador
+│   └── Loading.jsx     # Componente de carga
+├── pages/              # Páginas de la aplicación
+│   ├── Home.jsx        # Página principal con hero
+│   ├── Fighters.jsx    # Lista de todos los peleadores
+│   ├── FighterDetail.jsx # Detalle de un peleador
+│   ├── CreateFighter.jsx # Formulario de creación
+│   └── EditFighter.jsx   # Formulario de edición
+├── services/           # Servicios API
+│   └── api.js          # Funciones para consumir el backend
+├── App.jsx             # Componente principal
+├── main.jsx            # Punto de entrada
+└── index.css           # Estilos globales con Tailwind
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Instalación y Uso
 
-### `npm run build`
+### Prerrequisitos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (versión 16 o superior)
+- Backend corriendo en http://localhost:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Instalación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Instalar dependencias
+npm install
 
-### `npm run eject`
+# Iniciar servidor de desarrollo
+npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+La aplicación estará disponible en `http://localhost:5173`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build para producción
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+npm run preview
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎨 Diseño
 
-## Learn More
+### Paleta de Colores UFC
+- **Rojo UFC**: `#dc143c`
+- **Negro UFC**: `#0a0a0a`
+- **Gris UFC**: `#1a1a1a`
+- **Dorado UFC**: `#ffd700`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Componentes Estilizados
+- `.btn-ufc` - Botones con estilo UFC
+- `.card-ufc` - Cards con tema oscuro
+- `.hero-gradient` - Gradiente para secciones hero
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔌 API Integration
 
-### Code Splitting
+El frontend consume los siguientes endpoints del backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `GET /api/peleadores` - Lista de peleadores
+- `GET /api/peleadores/:id` - Detalle de peleador
+- `POST /api/peleadores/crear` - Crear peleador
+- `PUT /api/peleadores/actualizar/:id` - Actualizar peleador
+- `DELETE /api/peleadores/borrar/:id` - Eliminar peleador
+
+## 📱 Páginas
+
+### Home (`/`)
+- Hero section con llamada a acción
+- Lista de peleadores destacados
+- Enlaces a crear nuevo peleador
+
+### Peleadores (`/peleadores`)
+- Lista completa de todos los peleadores
+- Cards con información básica
+- Acciones: ver detalle, editar, eliminar
+
+### Detalle de Peleador (`/peleador/:id`)
+- Información completa del peleador
+- Estadísticas (victorias/derrotas)
+- Win rate calculado
+- Botones de acción
+
+### Crear Peleador (`/crear`)
+- Formulario para registrar nuevo peleador
+- Validación de campos requeridos
+- Lista de estilos de combate
+
+### Editar Peleador (`/editar/:id`)
+- Formulario pre-llenado para editar
+- Misma validación que crear
+
+## 🎯 Funcionalidades
+
+- ✅ Diseño responsive
+- ✅ Tema oscuro UFC
+- ✅ CRUD completo de peleadores
+- ✅ Manejo de errores
+- ✅ Estados de carga
+- ✅ Navegación fluida
+- ✅ Formularios con validación
+- ✅ Animaciones y transiciones
+
+## 🔧 Desarrollo
+
+### Scripts Disponibles
+
+- `npm run dev` - Servidor de desarrollo
+- `npm run build` - Build para producción
+- `npm run preview` - Vista previa del build
+- `npm run lint` - Ejecutar ESLint
+
+### Variables de Entorno
+
+El frontend espera que el backend esté corriendo en:
+```
+http://localhost:3000/api
+```
+
+## 🤝 Contribución
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT.
+
+---
+
+**¡Únete al Fight Club y registra a los mejores peleadores!** 🥊
 
 ### Analyzing the Bundle Size
 
