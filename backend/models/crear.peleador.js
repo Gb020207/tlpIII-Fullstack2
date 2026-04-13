@@ -7,7 +7,7 @@ export const Peleadores = sequelize.define("Peleadores", {
         allowNull: false
     },
     estilo: {
-        // Aquí están todos los estilos usados en el script masivo
+        
         type: DataTypes.ENUM(
             'MMA',
             'Boxeo',

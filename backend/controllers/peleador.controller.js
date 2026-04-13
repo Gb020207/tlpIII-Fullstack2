@@ -1,4 +1,4 @@
-import { where } from "sequelize";
+
 import { Peleadores } from "../models/crear.peleador.js";
 import sequelize from "../config/servidor.js";
 
